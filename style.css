@@ -1,0 +1,362 @@
+/* =====================
+   Global Styles
+===================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #1f2937;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  color: #FF8C00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #32CD32;
+}
+
+/* =====================
+   Header & Navigation
+===================== */
+/* =====================
+   Header & Navigation
+===================== */
+#header {
+  background: #e5e7eb;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  padding: 15px 0;
+  z-index: 999;
+}
+
+#header .container {
+  display: flex;
+  align-items: center;
+}
+
+#header .logo img {
+  height: 100px; 
+}
+
+.navbar {
+  margin-left: auto;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  font-weight: 500;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #FF8C00;
+}
+
+.getstarted {
+  background: linear-gradient(135deg, #FFD200, #FF8C00);
+  padding: 10px 22px;
+  border-radius: 30px;
+  color: #000 !important;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  #header .container {
+    flex-direction: column;
+  }
+
+  .navbar {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+
+/* =====================
+   Hero Section
+===================== */
+#hero {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    ),
+    url("img/pic4.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  color: #FFD200;
+  margin-bottom: 10px;
+}
+
+#hero h2 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/* =====================
+   Section Titles
+===================== */
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  color: #FF8C00;
+}
+
+.section-title p {
+  color: #555;
+}
+
+/* =====================
+   About Cards
+===================== */
+.about {
+  background: #f5f7fa;
+  padding: 110px 0;
+}
+
+.about .container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.about .row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 40px;
+
+  max-width: 1500px;
+  margin: 0 auto;          /* TRUE CENTER */
+  padding: 0 20px;         /* EVEN LEFT & RIGHT SPACE */
+}
+
+
+
+@media (max-width: 992px) {
+  .about .row {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about .row {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
+}
+
+
+.about .card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 55px rgba(0,0,0,0.18);
+}
+.about .card-img-top {
+  width: 100%;
+  height: 350px;          /* SMALLER LIKE EXAMPLE */
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =====================
+   Services Section
+===================== */
+.services {
+  background: #f9fafb;
+  padding: 80px 0;
+}
+
+.services .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.icon-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.icon-box i {
+  font-size: 42px;
+  color: #32CD32;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.icon-box h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.icon-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.icon-box:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(135deg, #FFD200, #FF8C00);
+}
+
+.icon-box:hover i,
+.icon-box:hover h4,
+.icon-box:hover p,
+.icon-box:hover a {
+  color: #000;
+}
+
+/* =====================
+   Contact Section
+===================== */
+.contact {
+  padding: 80px 0;
+}
+.contact .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.info-box {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.info-box i {
+  font-size: 32px;
+  color: #FF8C00;
+  margin-bottom: 10px;
+}
+
+/* =====================
+   Footer
+===================== */
+#footer {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+.footer-top {
+  padding: 60px 0;
+}
+/* Make footer sections horizontal */
+#footer .footer-top .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Each column */
+#footer .footer-top .row > div {
+  flex: 1;
+  min-width: 220px; /* allows wrapping on small screens */
+}
+.footer-info h3 {
+  color: #FF8C00;
+}
+
+.footer-links h4,
+.footer-newsletter h4 {
+  color: #FF8C00;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #e5e7eb;
+}
+
+.footer-links a:hover {
+  color: #32CD32;
+}
+
+.social-links a {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #FFD200;
+}
+
+.social-links a:hover {
+  color: #32CD32;
+}
+
+.footer-newsletter input[type="email"] {
+  padding: 10px;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  width: 65%;
+}
+
+.footer-newsletter input[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 0 20px 20px 0;
+  border: none;
+  background: #FFD200;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer-newsletter input[type="submit"]:hover {
+  background: #FF8C00;
+}
+
+
+/* =====================
+   Copyright
+===================== */
+#footer .copyright,
+#footer .credits {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
